@@ -13,13 +13,9 @@ const connect = function() {
     conn.write("Name: NRP");
   });
 
-  // conn.on("connect", () => {
-  //   setTimeout(() => conn.write("Move: up"), 100);
-  // });
   conn.on("timeout", () => {
     console.log("you ded cuz you idled");
   });
-  // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("data", data => {
     console.log(data);
