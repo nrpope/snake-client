@@ -9,7 +9,8 @@ const connect = function() {
     port: 50541
   });
   conn.on("connect", () => {
-    console.log("I have connected");
+    console.log("Successful connection to game server");
+    conn.write("Name: NRP");
   });
   conn.on("timeout", () => {
     console.log("you ded cuz you idled");
