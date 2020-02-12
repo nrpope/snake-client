@@ -12,6 +12,10 @@ const connect = function() {
     console.log("Successful connection to game server");
     conn.write("Name: NRP");
   });
+
+  // conn.on("connect", () => {
+  //   setTimeout(() => conn.write("Move: up"), 100);
+  // });
   conn.on("timeout", () => {
     console.log("you ded cuz you idled");
   });
